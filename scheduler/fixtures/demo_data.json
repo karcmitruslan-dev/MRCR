@@ -1,0 +1,22 @@
+[
+  {"model": "scheduler.teacher", "pk": 1, "fields": {"name": "Иванова Анна Петровна"}},
+  {"model": "scheduler.teacher", "pk": 2, "fields": {"name": "Сидоров Михаил Сергеевич"}},
+  {"model": "scheduler.teacher", "pk": 3, "fields": {"name": "Козлова Елена Викторовна"}},
+
+  {"model": "scheduler.subject", "pk": 1, "fields": {"title": "Математика"}},
+  {"model": "scheduler.subject", "pk": 2, "fields": {"title": "Программирование"}},
+  {"model": "scheduler.subject", "pk": 3, "fields": {"title": "Английский язык"}},
+  {"model": "scheduler.subject", "pk": 4, "fields": {"title": "Базы данных"}},
+
+  {"model": "scheduler.group", "pk": 1, "fields": {"name": "ПО-21"}},
+  {"model": "scheduler.group", "pk": 2, "fields": {"name": "ИС-22"}},
+
+  {"model": "scheduler.schedule", "pk": 1, "fields": {"group": 1, "subject": 1, "teacher": 1, "day_of_week": "Пн", "time": "08:30:00"}},
+  {"model": "scheduler.schedule", "pk": 2, "fields": {"group": 1, "subject": 2, "teacher": 2, "day_of_week": "Пн", "time": "10:15:00"}},
+  {"model": "scheduler.schedule", "pk": 3, "fields": {"group": 1, "subject": 3, "teacher": 3, "day_of_week": "Ср", "time": "12:00:00"}},
+  {"model": "scheduler.schedule", "pk": 4, "fields": {"group": 1, "subject": 4, "teacher": 2, "day_of_week": "Пт", "time": "10:15:00"}},
+
+  {"model": "scheduler.schedule", "pk": 5, "fields": {"group": 2, "subject": 2, "teacher": 2, "day_of_week": "Вт", "time": "08:30:00"}},
+  {"model": "scheduler.schedule", "pk": 6, "fields": {"group": 2, "subject": 1, "teacher": 1, "day_of_week": "Чт", "time": "10:15:00"}},
+  {"model": "scheduler.schedule", "pk": 7, "fields": {"group": 2, "subject": 3, "teacher": 3, "day_of_week": "Пт", "time": "12:00:00"}}
+]

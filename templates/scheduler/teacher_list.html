@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Преподаватели{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+    <div>
+        <h1 class="h3 mb-0">Преподаватели</h1>
+        <p class="text-muted mb-0">Справочник преподавателей колледжа</p>
+    </div>
+    <a href="{% url 'scheduler:teacher_add' %}" class="btn btn-primary">+ Добавить преподавателя</a>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="table-responsive">
+        <table class="table align-middle mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th>#</th>
+                    <th>ФИО</th>
+                    <th>Занятий в расписании</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for teacher in teachers %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ teacher.name }}</td>
+                        <td>{{ teacher.classes_count }}</td>
+                    </tr>
+                {% empty %}
+                    <tr><td colspan="3" class="text-center text-muted py-4">Список пуст</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
